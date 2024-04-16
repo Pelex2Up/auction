@@ -20,6 +20,8 @@ export default function Latest() {
     );
   if (error) return <div>Ошибка при выполнении запроса...</div>;
 
+  console.log('1')
+
   const dataTo = new FormData();
   dataTo.append("email", "admin@gmail.com");
   dataTo.append("password", "admin");
