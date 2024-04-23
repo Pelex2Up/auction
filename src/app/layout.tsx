@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Аукцион",
@@ -25,9 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="w-screen min-h-screen flex relative flex-col">
+        <div className="w-screen min-h-screen flex relative flex-col gap-[20px]">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

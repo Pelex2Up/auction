@@ -39,7 +39,7 @@ export const CourseInfo: FC = () => {
     <div className="flex flex-row gap-8 text-sm items-center">
       <p>
         Курс валют НБРБ на {String(today.getDate()).padStart(2, "0")}.
-        {String(today.getMonth()).padStart(2, "0")}.{today.getFullYear()}:
+        {String(today.getMonth() + 1).padStart(2, "0")}.{today.getFullYear()}:
       </p>
       <div className="flex gap-2 items-center">
         <Image src={usaDollar} alt="us-dollar" />

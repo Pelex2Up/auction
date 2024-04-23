@@ -1,12 +1,10 @@
-import Image from "next/image";
 import { Button } from "../common/buttons";
 import { CourseInfo } from "./courseInfo";
 import styles from "./header.module.scss";
-import plusIcon from "@/assets/icons/plus.svg";
 
 export default function Header() {
   return (
-    <nav className={styles.wrapper}>
+    <header className={styles.wrapper}>
       <div className={styles.wrapper_topHeader}>
         <div className={styles.wrapper_topHeader_leftContent}>
           <a>Главная</a>
@@ -56,6 +54,6 @@ export default function Header() {
           <Button text="Вход в аккаунт и регистрация" variant="secondary" />
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
