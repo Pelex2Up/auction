@@ -4,6 +4,7 @@ import BG from "../../assets/images/feedbackBG.png";
 import { Input } from "../common/Input";
 import Checkbox from "../common/checkbox";
 import { Button } from "../common/buttons";
+import DefaultLink from "../common/DefaultLink";
 
 export default function FeedBack() {
   return (
@@ -21,7 +22,18 @@ export default function FeedBack() {
         alt="feed-back"
       />
       <div className="w-full min-h-[215px] h-auto absolute top-[22px] left-0 z-0 bg-[#f3f3f3]">
-        <Image src={BG} layout="fill" objectFit="cover" alt="background" />
+        <Image
+          src={BG}
+          style={{
+            objectFit: "cover",
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+          }}
+          alt="background"
+        />
         <div className="w-full py-[32px] pl-[390px] pr-[40px] relative z-20 flex flex-col gap-[10px]">
           <span className="text-sm leading-[16.8px] font-normal text-[#1D1E22]">
             Отправьте ваш электронный адрес и мы ответим
@@ -53,13 +65,15 @@ export default function FeedBack() {
                 label={
                   <p className="max-w-[230px] text-sm text-[#808080] font-normal">
                     Я принимаю условия{" "}
-                    <a className="text-[#008001] cursor-pointer">
-                      Пользовательского соглашения
-                    </a>{" "}
+                    <DefaultLink
+                      text="Пользовательского соглашения"
+                      style={{ color: "#008001" }}
+                    />{" "}
                     и{" "}
-                    <a className="text-[#008001] cursor-pointer">
-                      Политику конфиденциальности
-                    </a>
+                    <DefaultLink
+                      text="Политику конфиденциальности"
+                      style={{ color: "#008001" }}
+                    />
                   </p>
                 }
               />

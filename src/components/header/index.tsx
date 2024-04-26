@@ -1,22 +1,29 @@
+"use client";
+import { useState } from "react";
+import DefaultLink from "../common/DefaultLink";
 import { Button } from "../common/buttons";
 import { CourseInfo } from "./courseInfo";
 import styles from "./header.module.scss";
+import Portal from "../Modal/Portal";
+import { LoginModal } from "../Modal/Login";
 
 export default function Header() {
+  const [show, setShow] = useState<boolean>(false);
   return (
     <header className={styles.wrapper}>
       <div className={styles.wrapper_topHeader}>
         <div className={styles.wrapper_topHeader_leftContent}>
-          <a>Главная</a>
-          <a>Объявления о покупке</a>
-          <a>Объявления о продаже</a>
-          <a>Правила участия</a>
-          <a>Тарифы</a>
-          <a>Реклама</a>
+          <DefaultLink text="Главная" />
+          <DefaultLink text="Объявления о покупке" />
+          <DefaultLink text="Объявления о продаже" />
+          <DefaultLink text="Правила участия" />
+          <DefaultLink text="Тарифы" />
+          <DefaultLink text="Реклама" />
         </div>
         <div className={styles.wrapper_topHeader_rightContent}>
           <p>
-            Для подачи объявления необходимо пройти <a>регистрацию</a>
+            Для подачи объявления необходимо пройти{" "}
+            <DefaultLink style={{ color: "#008001" }} text="регистрацию" />
           </p>
         </div>
       </div>
@@ -46,14 +53,23 @@ export default function Header() {
               <path
                 d="M11 1V21M1 10.9385H21"
                 stroke="white"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Button>
-          <Button text="Вход в аккаунт и регистрация" variant="secondary" />
+          <Button
+            onClick={() => setShow(true)}
+            text="Вход в аккаунт и регистрация"
+            variant="secondary"
+          />
         </div>
       </div>
+      {show && (
+        <Portal close={() => setShow(false)}>
+          <LoginModal close={() => setShow(false)} />
+        </Portal>
+      )}
     </header>
   );
 }

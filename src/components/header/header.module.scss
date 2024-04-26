@@ -3,7 +3,7 @@
   height: 99px;
   left: 0;
   top: 0;
-  margin: 52px 0;
+  margin: 52px 0 0;
   padding: 0 60px;
   display: flex;
   flex-direction: column;
@@ -29,25 +29,6 @@
       gap: 16px;
       width: max-content;
       height: 1rem;
-
-      a {
-        cursor: pointer;
-        text-decoration: none;
-        height: 17px;
-        line-height: 120%;
-        letter-spacing: 0.01em;
-        color: black;
-        border-bottom: 1px solid white;
-
-        &:hover {
-          color: #008001;
-          border-bottom: 1px solid #008001;
-        }
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-      }
     }
 
     &_rightContent {
@@ -58,23 +39,6 @@
       flex: none;
       order: 1;
       flex-grow: 0;
-
-      a {
-        cursor: pointer;
-        text-decoration: none;
-        height: 17px;
-        line-height: 120%;
-        letter-spacing: 0.01em;
-        color: #008001;
-        border-bottom: 1px solid white;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-
-        &:hover {
-          border-bottom: 1px solid #008001;
-        }
-      }
     }
   }
 
