@@ -3,31 +3,38 @@ import Logo from "../../../assets/logo/logoModal.png";
 import Image from "next/image";
 import LoginElement from "./loginElement";
 import ResetPassword from "./resetPassword";
+import RegistrationElement from "./registrationElement";
 
 type LoginT = {
   close: () => void;
+  selectedState?: number;
 };
 
-export const LoginModal: FC<LoginT> = ({ close }) => {
-  const [selected, setSelected] = useState<number>(1);
+export const LoginModal: FC<LoginT> = ({ close, selectedState }) => {
+  const [selected, setSelected] = useState<number>(selectedState || 1);
 
   const handleClose = () => {
-    document.body.classList.remove(".modal-open");
+    document.body.classList.remove("modal-open");
     close();
   };
 
   return (
     <div
       className={
-        selected !== 3
+        selected === 1
           ? "w-[501px] h-[530px] relative z-30"
-          : "w-[501px] h-[430px] relative z-30"
+          : selected === 2
+          ? "w-[501px] h-[673px] relative z-30"
+          : "w-[501px] h-[410px] relative z-30"
       }
+      style={{ transition: "ease-in all 0.2s" }}
     >
       <div
         className={
-          selected !== 3
+          selected === 1
             ? "w-[501px] h-[530px] left-0 top-0 absolute bg-white rounded shadow"
+            : selected === 2
+            ? "w-[501px] h-[673px] left-0 top-0 absolute bg-white rounded shadow"
             : "w-[501px] h-[410px] left-0 top-0 absolute bg-white rounded shadow"
         }
       />
@@ -37,8 +44,8 @@ export const LoginModal: FC<LoginT> = ({ close }) => {
       </div>
       <div className="w-6 h-6 left-[445px] top-[32px] absolute justify-center items-center inline-flex cursor-pointer">
         <button
-          onClick={handleClose}
           className="w-6 h-6 relative flex-col justify-start items-start flex"
+          onClick={handleClose}
         >
           <svg
             width="24"
@@ -89,11 +96,11 @@ export const LoginModal: FC<LoginT> = ({ close }) => {
         </ul>
       )}
       {selected === 1 ? (
-        <LoginElement changeAction={setSelected} />
+        <LoginElement changeAction={setSelected} close={handleClose} />
       ) : selected === 3 ? (
         <ResetPassword />
       ) : (
-        <></>
+        <RegistrationElement changeAction={setSelected} close={handleClose} />
       )}
     </div>
   );

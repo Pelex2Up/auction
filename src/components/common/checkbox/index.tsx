@@ -9,7 +9,7 @@ import {
 import styles from "./checkbox.module.scss";
 
 type CheckboxT = {
-  label: string | ReactNode;
+  label?: string | ReactNode;
 } & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 export const Checkbox: FC<CheckboxT> = ({ label, ...rest }) => {

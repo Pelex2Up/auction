@@ -13,12 +13,18 @@ type InputT = DetailedHTMLProps<
 > & {
   multiline: boolean;
   secure?: boolean;
+  error?: boolean;
 } & DetailedHTMLProps<
     TextareaHTMLAttributes<HTMLTextAreaElement>,
     HTMLTextAreaElement
   >;
 
-export const Input: FC<InputT> = ({ multiline, secure = false, ...rest }) => {
+export const Input: FC<InputT> = ({
+  multiline,
+  error = false,
+  secure = false,
+  ...rest
+}) => {
   const [eyeState, setEyeState] = useState<boolean>(secure || false);
 
   return !multiline ? (
@@ -26,7 +32,9 @@ export const Input: FC<InputT> = ({ multiline, secure = false, ...rest }) => {
       <input
         {...rest}
         type={eyeState ? "password" : "text"}
-        style={{ border: "1px solid #D9D9D9" }}
+        style={
+          error ? { border: "1px solid red" } : { border: "1px solid #D9D9D9" }
+        }
         className={`${
           secure ? "pr-12" : ""
         } p-[12px] rounded bg-transparent text-sm font-normal relative ${

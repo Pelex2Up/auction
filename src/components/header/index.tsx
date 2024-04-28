@@ -9,11 +9,14 @@ import { LoginModal } from "../Modal/Login";
 
 export default function Header() {
   const [show, setShow] = useState<boolean>(false);
+  const [modalState, setModalState] = useState<number>(1);
+  // const profileData = fetch('https://auction.magnetica.by/api/me/')
+
   return (
     <header className={styles.wrapper}>
       <div className={styles.wrapper_topHeader}>
         <div className={styles.wrapper_topHeader_leftContent}>
-          <DefaultLink text="Главная" />
+          <DefaultLink text="Главная" href="/" />
           <DefaultLink text="Объявления о покупке" />
           <DefaultLink text="Объявления о продаже" />
           <DefaultLink text="Правила участия" />
@@ -23,7 +26,14 @@ export default function Header() {
         <div className={styles.wrapper_topHeader_rightContent}>
           <p>
             Для подачи объявления необходимо пройти{" "}
-            <DefaultLink style={{ color: "#008001" }} text="регистрацию" />
+            <DefaultLink
+              onClick={() => {
+                setModalState(2);
+                setShow(true);
+              }}
+              style={{ color: "#008001" }}
+              text="регистрацию"
+            />
           </p>
         </div>
       </div>
@@ -59,7 +69,10 @@ export default function Header() {
             </svg>
           </Button>
           <Button
-            onClick={() => setShow(true)}
+            onClick={() => {
+              setModalState(1);
+              setShow(true);
+            }}
             text="Вход в аккаунт и регистрация"
             variant="secondary"
           />
@@ -67,7 +80,7 @@ export default function Header() {
       </div>
       {show && (
         <Portal close={() => setShow(false)}>
-          <LoginModal close={() => setShow(false)} />
+          <LoginModal selectedState={modalState} close={() => setShow(false)} />
         </Portal>
       )}
     </header>
