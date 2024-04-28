@@ -41,12 +41,13 @@ export default function FeedBack() {
           <div className="grid grid-cols-2 w-full gap-[20px]">
             <div className="grid grid-cols-2 w-full gap-[10px]">
               <Input
+                className="w-full"
                 multiline={false}
                 placeholder="Имя"
                 name="name"
-                width={300}
               />
               <Input
+                className="w-full"
                 multiline={false}
                 placeholder="Электронная почта"
                 name="email"
