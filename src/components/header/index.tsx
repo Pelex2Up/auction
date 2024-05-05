@@ -1,16 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DefaultLink from "../common/DefaultLink";
 import { Button } from "../common/buttons";
 import { CourseInfo } from "./courseInfo";
 import styles from "./header.module.scss";
 import Portal from "../Modal/Portal";
 import { LoginModal } from "../Modal/Login";
+import { jwtDecode } from "jwt-decode";
 
-export default function Header() {
+export default function Header({ ...props }: { token: string }) {
   const [show, setShow] = useState<boolean>(false);
   const [modalState, setModalState] = useState<number>(1);
   // const profileData = fetch('https://auction.magnetica.by/api/me/')
+
+  useEffect(() => {
+    if (props.token) {
+      const decoded = jwtDecode(props.token);
+      console.log("decoded token: ", decoded);
+    }
+  }, [props.token]);
 
   return (
     <header className={styles.wrapper}>
