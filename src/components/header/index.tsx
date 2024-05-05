@@ -6,19 +6,31 @@ import { CourseInfo } from "./courseInfo";
 import styles from "./header.module.scss";
 import Portal from "../Modal/Portal";
 import { LoginModal } from "../Modal/Login";
-import { jwtDecode } from "jwt-decode";
+import { IProfile } from "@/types/profile";
+import ProfileHeader from "../common/profile";
 
-export default function Header({ ...props }: { token: string }) {
+export default function Header() {
   const [show, setShow] = useState<boolean>(false);
   const [modalState, setModalState] = useState<number>(1);
-  // const profileData = fetch('https://auction.magnetica.by/api/me/')
+  const [profile, setProfile] = useState<IProfile>();
+  const [status, setStatus] = useState<string>();
 
   useEffect(() => {
-    if (props.token) {
-      const decoded = jwtDecode(props.token);
-      console.log("decoded token: ", decoded);
+    if (!profile && status !== "unauthorized") {
+      const getProfile = async () => {
+        const profileData = await fetch("https://auction.magnetica.by/api/me/");
+
+        if (profileData.ok) {
+          setProfile(await profileData.json());
+        } else {
+          setStatus("unauthorized");
+        }
+      };
+      getProfile();
     }
-  }, [props.token]);
+  }, [profile, status]);
+
+  console.log(profile?.username);
 
   return (
     <header className={styles.wrapper}>
@@ -59,31 +71,40 @@ export default function Header({ ...props }: { token: string }) {
           <CourseInfo />
         </div>
         <div className={styles.wrapper_bottomHeader_rightContent}>
-          <Button text="Подать объявление">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M11 1V21V1ZM1 10.9385H21H1Z" fill="white" />
-              <path
-                d="M11 1V21M1 10.9385H21"
-                stroke="white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+          {!profile ? (
+            <>
+              <Button text="Подать объявление">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M11 1V21V1ZM1 10.9385H21H1Z" fill="white" />
+                  <path
+                    d="M11 1V21M1 10.9385H21"
+                    stroke="white"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Button>
+              <Button
+                onClick={() => {
+                  setModalState(1);
+                  setShow(true);
+                }}
+                text="Вход в аккаунт и регистрация"
+                variant="secondary"
               />
-            </svg>
-          </Button>
-          <Button
-            onClick={() => {
-              setModalState(1);
-              setShow(true);
-            }}
-            text="Вход в аккаунт и регистрация"
-            variant="secondary"
-          />
+            </>
+          ) : (
+            <ProfileHeader
+              username={profile.username}
+              avatar={profile.profile.avatar || ""}
+            />
+          )}
         </div>
       </div>
       {show && (

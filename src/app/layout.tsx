@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { cookies } from "next/headers";
-import { jwtDecode } from "jwt-decode";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Аукцион",
@@ -25,13 +24,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
-  const access = cookieStore.get("access_token");
   return (
     <html lang="en">
       <body>
         <div className="w-screen min-h-screen flex relative flex-col gap-[20px]">
-          <Header token={access?.value || ""} />
+          <Suspense fallback={<></>}>
+            <Header />
+          </Suspense>
           {children}
           <Footer />
         </div>
