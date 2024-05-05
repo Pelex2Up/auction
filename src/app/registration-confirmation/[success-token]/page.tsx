@@ -9,7 +9,11 @@ export default function RegistrationConfirmation({
   const { "success-token": token } = params;
 
   return (
-    <Suspense fallback={<div>Проверка токена...</div>}>
+    <Suspense
+      fallback={
+        <div className="w-full h-full text-center">Проверка токена...</div>
+      }
+    >
       <VerificationData token={token} />
     </Suspense>
   );
