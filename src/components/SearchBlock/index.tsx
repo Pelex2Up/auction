@@ -20,7 +20,7 @@ export const SearchBlock: FC = () => {
             </span>
           ))}
         </div>
-        <div className="w-full h-[472px] relative overflow-scroll">
+        <div className="w-full h-[472px] relative overflow-x-scroll overflow-y-hidden">
           <div className="w-full h-[472px] left-0 top-0 absolute bg-white shadow"></div>
           <div className="h-[386px] left-[24px] top-[24px] absolute flex-col justify-start items-start gap-6 inline-flex">
             <div className="w-[138px] justify-start items-center gap-2 inline-flex">
@@ -292,7 +292,7 @@ export const SearchBlock: FC = () => {
             </span>
           ))}
         </div>
-        <div className="w-full h-[472px] relative overflow-scroll">
+        <div className="w-full h-[472px] relative overflow-x-scroll overflow-y-hidden">
           <div className="w-full h-[472px] left-0 top-0 absolute bg-white shadow"></div>
           <div className="h-[386px] left-[24px] top-[24px] absolute flex-col justify-start items-start gap-6 inline-flex">
             <div className="w-[138px] justify-start items-center gap-2 inline-flex">

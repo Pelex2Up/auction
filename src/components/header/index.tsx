@@ -10,8 +10,11 @@ import { IProfile } from "@/types/profile";
 import ProfileHeader from "../common/profile";
 import Image from "next/image";
 import Logo from "@/assets/logo/logo.svg";
+import { useRouter } from "next/navigation";
+import { PathE } from "@/enum/pathE";
 
 export default function Header() {
+  const router = useRouter();
   const [show, setShow] = useState<boolean>(false);
   const [modalState, setModalState] = useState<number>(1);
   const [profile, setProfile] = useState<IProfile>();
@@ -118,7 +121,7 @@ export default function Header() {
         )}
       </header>
       <header className={styles.mobileWrapper}>
-        <Image src={Logo} alt="Logo" />
+        <Image src={Logo} alt="Logo" onClick={() => router.push(PathE.Home)} />
         <svg
           width="50"
           height="50"
