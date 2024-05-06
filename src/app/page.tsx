@@ -8,7 +8,7 @@ import LotsBlock from "@/components/LotsBlock";
 export default function Home() {
   return (
     <main className="w-full h-auto flex flex-col gap-8">
-      <div className="w-full h-[54px] justify-center items-center inline-flex px-[60px]">
+      <div className="xl:w-full xl:h-[54px] xl:justify-center xl:items-center xl:inline-flex xl:px-[60px] hidden">
         <div className="grow shrink basis-0 self-stretch justify-between items-center inline-flex">
           <Image src={Logo} alt="logo" />
           <div className="justify-end items-center gap-6 flex">

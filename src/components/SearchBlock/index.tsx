@@ -2,157 +2,26 @@ import { FC } from "react";
 import SearchInput from "../common/SearchInput";
 
 export const SearchBlock: FC = () => {
+  const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя".split("");
   return (
-    <div className="w-full h-[643px] justify-center items-start gap-[25px] inline-flex">
-      <div className="w-[45%] h-[643px] relative flex-col justify-start items-center flex gap-6">
+    <div className="flex flex-col w-full xl:h-[643px] xl:justify-center xl:items-start gap-[25px] xl:flex-row items-center justify-start h-full">
+      <div className="xl:w-[45%] w-full h-[643px] relative flex-col justify-start items-center flex gap-6">
         <div className="text-zinc-900 text-2xl font-medium font-['SF Pro Text'] leading-[28.80px] tracking-tight">
           Обьявления о продаже
         </div>
         <SearchInput />
-        <div className="justify-start items-start gap-2 inline-flex">
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              A
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Б
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              В
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Г
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Д
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Е
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ж
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              З
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              И
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              К
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Л
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              М
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Н
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              О
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              П
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Р
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              С
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Т
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              У
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ф
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Х
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ц
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ч
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ш
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Щ
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-green-800 text-base font-medium font-['SF Pro Text'] underline leading-tight tracking-tight">
-              Э
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ю
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Я
-            </div>
-          </div>
+        <div className="w-full justify-center items-start gap-2 inline-flex flex-wrap px-2">
+          {alphabet.map((el, index) => (
+            <span
+              className="capitalize text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer"
+              key={index}
+            >
+              {el}
+            </span>
+          ))}
         </div>
-        <div className="w-[647px] h-[472px] relative">
-          <div className="w-[647px] h-[472px] left-0 top-0 absolute bg-white shadow"></div>
+        <div className="w-full h-[472px] relative overflow-scroll">
+          <div className="w-full h-[472px] left-0 top-0 absolute bg-white shadow"></div>
           <div className="h-[386px] left-[24px] top-[24px] absolute flex-col justify-start items-start gap-6 inline-flex">
             <div className="w-[138px] justify-start items-center gap-2 inline-flex">
               <div className="grow shrink basis-0 h-[17px] justify-between items-center flex">
@@ -408,155 +277,23 @@ export const SearchBlock: FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-[45%] h-[643px] relative flex-col justify-start items-center flex gap-6">
+      <div className="xl:w-[45%] w-full h-[643px] relative flex-col justify-start items-center flex gap-6">
         <div className="text-zinc-900 text-2xl font-medium font-['SF Pro Text'] leading-[28.80px] tracking-tight">
           Обьявления о покупке
         </div>
         <SearchInput />
-        <div className="justify-start items-start gap-2 inline-flex">
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              A
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Б
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              В
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Г
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Д
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Е
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ж
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              З
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              И
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              К
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Л
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              М
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Н
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              О
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              П
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Р
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              С
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Т
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              У
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ф
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Х
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ц
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ч
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ш
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Щ
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-green-800 text-base font-medium font-['SF Pro Text'] underline leading-tight tracking-tight">
-              Э
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Ю
-            </div>
-          </div>
-          <div className="w-3.5 h-3.5 justify-center items-center flex">
-            <div className="w-3.5 h-4 text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer">
-              Я
-            </div>
-          </div>
+        <div className="w-full xl:justify-start justify-center items-start gap-2 inline-flex flex-wrap px-2">
+          {alphabet.map((el, index) => (
+            <span
+              className="capitalize text-center text-zinc-900 text-base font-medium font-['SF Pro Text'] leading-tight tracking-tight cursor-pointer"
+              key={index + el}
+            >
+              {el}
+            </span>
+          ))}
         </div>
-        <div className="w-[647px] h-[472px] relative">
-          <div className="w-[647px] h-[472px] left-0 top-0 absolute bg-white shadow"></div>
+        <div className="w-full h-[472px] relative overflow-scroll">
+          <div className="w-full h-[472px] left-0 top-0 absolute bg-white shadow"></div>
           <div className="h-[386px] left-[24px] top-[24px] absolute flex-col justify-start items-start gap-6 inline-flex">
             <div className="w-[138px] justify-start items-center gap-2 inline-flex">
               <div className="grow shrink basis-0 h-[17px] justify-between items-center flex">

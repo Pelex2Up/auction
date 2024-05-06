@@ -12,6 +12,10 @@
   font-weight: 400;
   font-size: 14px;
 
+  @media (max-width: 1270px) {
+    display: none;
+  }
+
   &_topHeader {
     display: flex;
     flex-direction: row;
@@ -63,4 +67,15 @@
 
 .icon {
   color: #008001;
+}
+
+.mobileWrapper {
+  @media (max-width: 1270px) {
+    display: flex;
+  }
+  display: none;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e8e8e8;
 }

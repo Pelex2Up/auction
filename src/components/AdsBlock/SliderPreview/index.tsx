@@ -7,13 +7,13 @@ import Ad3 from "../../../assets/ads/pc.png";
 export const SliderAds: FC = () => {
   return (
     <div className="w-full h-[527px] flex-col justify-center items-start gap-8 inline-flex px-[60px]">
-      <div className="w-[1320px] grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex">
+      <div className="lg:w-[1320px] w-full grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex">
         <div className="w-32 h-[29px] pr-[23px] justify-start items-center inline-flex">
           <div className="text-zinc-900 text-2xl font-medium font-['SF Pro Text'] leading-[28.80px] tracking-tight">
             Реклама
           </div>
         </div>
-        <div className="self-stretch justify-start items-start gap-6 inline-flex">
+        <div className="self-stretch justify-start items-start gap-6 inline-flex overflow-hidden">
           <Image
             className="w-[312px] h-[418px] rounded shadow"
             src={Ad1}

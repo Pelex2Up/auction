@@ -23,7 +23,7 @@ const VerificationData = async ({ token }: { token: string }) => {
   }, [token]);
 
   return (
-    <div className="w-full h-full py-[50px] px-[90px] flex flex-col items-center transition-all duration-200 ease-in">
+    <div className="w-full h-full py-[50px] px-[90px] flex flex-col justify-center items-center transition-all duration-200 ease-in">
       {validationData &&
       validationData !==
         "Ошибка валидации электронной почты. Неверный токен" ? (

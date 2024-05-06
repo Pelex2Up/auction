@@ -8,23 +8,23 @@ import DefaultLink from "../common/DefaultLink";
 
 export default function Footer() {
   return (
-    <div className="w-screen px-[50px] py-6 flex flex-col gap-[24px] bg-[#F6F6F6] relative">
+    <div className="w-screen xl:px-[50px] px-[20px] py-6 flex flex-col gap-[24px] bg-[#F6F6F6] relative">
       <Image
         src={BGImage}
-        className="absolute top-[33px] right-[50px] h-[250px] w-[250px]"
+        className="absolute xl:top-[33px] right-[20px] top-[250px] xl:right-[50px] xl:h-[250px] xl:w-[250px] w-[150px] h-[150px]"
         alt="shop"
       />
       <Image
         src={ShopImage}
-        className="absolute top-[33px] right-[50px] h-[250px] w-[250px]"
+        className="absolute xl:top-[33px] right-[20px] top-[250px] xl:right-[50px] xl:h-[250px] xl:w-[250px] w-[150px] h-[150px]"
         alt="shop"
       />
 
       <div className="flex w-full">
         <Image src={Logo} alt="logo" />
       </div>
-      <div className="flex flex-row justify-between w-[80%] h-auto">
-        <div className="flex flex-col gap-[6px] max-w-[284px]">
+      <div className="flex xl:flex-row flex-col justify-between xl:items-start items-center xl:w-[80%] h-auto w-full gap-[20px]">
+        <div className="flex flex-col gap-[6px] xl:max-w-[284px] w-full">
           <p className="text-sm text-[#1D1E22] font-normal leading-[16.8px]">
             ООО “Стоковая Биржа”
           </p>
@@ -38,7 +38,7 @@ export default function Footer() {
           </p>
         </div>
         <div
-          className={`flex flex-col gap-[12px] justify-start items-start ${styles.btnGroup}`}
+          className={`flex flex-col gap-[12px] w-full justify-start items-start ${styles.btnGroup}`}
         >
           <DefaultLink text="Главная" />
           <DefaultLink text="Объявления о покупке" />
@@ -48,7 +48,7 @@ export default function Footer() {
           <DefaultLink text="Реклама" />
         </div>
         <div
-          className={`flex flex-col gap-[12px] justify-start items-start text-sm leading-[16.8px] tracking-[1%] font-normal`}
+          className={`flex flex-col gap-[12px] justify-start items-start text-sm leading-[16.8px] tracking-[1%] font-normal w-full`}
         >
           <span>Контакты</span>
           <a
@@ -108,7 +108,7 @@ export default function Footer() {
           <Button variant="secondary" text="Связатся с администратором" />
         </div>
       </div>
-      <div className="w-full flex flex-row justify-between h-[24px] mt-10">
+      <div className="w-full flex xl:flex-row flex-col-reverse gap-2 xl:justify-between justify-center items-start xl:h-[24px] xl:mt-10">
         <p className="flex gap-1 text-sm font-normal items-center text-[#808080] justify-start">
           <svg
             width="14"

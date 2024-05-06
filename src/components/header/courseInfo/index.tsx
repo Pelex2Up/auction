@@ -1,6 +1,6 @@
 "use client";
 import { fetchData } from "@/api/fetchData";
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 import usaDollar from "@/assets/icons/usa.svg";
 import euro from "@/assets/icons/euro.svg";

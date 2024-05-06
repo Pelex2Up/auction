@@ -8,7 +8,7 @@ import DefaultLink from "../common/DefaultLink";
 
 export default function FeedBack() {
   return (
-    <div className="w-full relative">
+    <div className="w-full mb-[360px] lg:mb-0 relative">
       <Image
         src={Person}
         height={247}
@@ -21,12 +21,13 @@ export default function FeedBack() {
         }}
         alt="feed-back"
       />
-      <div className="w-full min-h-[215px] h-auto absolute top-[22px] left-0 z-0 bg-[#f3f3f3]">
+      <div className="w-full xl:h-[215px] h-auto absolute top-[22px] left-0 z-0 bg-[#f3f3f3]">
         <Image
           src={BG}
           style={{
             objectFit: "cover",
             position: "absolute",
+            height: '100%',
             top: 0,
             bottom: 0,
             left: 0,
@@ -34,11 +35,11 @@ export default function FeedBack() {
           }}
           alt="background"
         />
-        <div className="w-full py-[32px] pl-[390px] pr-[40px] relative z-20 flex flex-col gap-[10px]">
+        <div className="w-full h-full py-[32px] xl:pl-[390px] xl:pr-[40px] px-4 pt-[250px] relative z-20 flex flex-col gap-[10px]">
           <span className="text-sm leading-[16.8px] font-normal text-[#1D1E22]">
             Отправьте ваш электронный адрес и мы ответим
           </span>
-          <div className="grid grid-cols-2 w-full gap-[20px]">
+          <div className="grid lg:grid-cols-2 grid-rows-2 w-full gap-[20px]">
             <div className="grid grid-cols-2 w-full gap-[10px]">
               <Input
                 className="w-full"

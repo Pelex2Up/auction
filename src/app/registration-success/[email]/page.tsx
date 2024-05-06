@@ -8,10 +8,10 @@ export default function RegistrationSuccess() {
   const path = usePathname();
   const email = path?.split("registration-success/")[1];
   return (
-    <div className="w-full h-full py-[50px] px-[90px] flex flex-col items-center">
+    <div className="w-full h-full py-[50px] px-[90px] flex flex-col justify-center items-center">
       <Image src={mail} width={99} height={99} alt="mail-success" />
-      <div className="w-full flex-col justify-start items-center gap-1.5 inline-flex">
-        <div className="text-zinc-900 text-lg font-medium font-['SF Pro Text'] leading-snug">
+      <div className="w-full flex-col justify-center items-center gap-1.5 inline-flex">
+        <div className="text-zinc-900 text-center text-lg font-medium font-['SF Pro Text'] leading-snug">
           Ссылка для подтверждения электронной почты отправлена
         </div>
         <div className="justify-start items-center gap-4 inline-flex">
